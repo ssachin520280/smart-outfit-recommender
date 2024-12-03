@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Outfit Recommender</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="animate__animated animate__fadeIn">Outfit Recommender</h1>
+
+        <div class="input-section">
+            <label for="weather" class="sr-only">Choose Weather</label>
+            <select id="weather" name="weather" class="input-field animate__animated animate__fadeInUp" aria-label="Choose Weather">
+                <option value="">Choose Weather...</option>
+                <option value="sunny">Sunny</option>
+                <option value="rainy">Rainy</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+
+            <label for="occasion" class="sr-only">Choose Occasion</label>
+            <select id="occasion" name="occasion" class="input-field animate__animated animate__fadeInUp animate-delay-1" aria-label="Choose Occasion">
+                <option value="">Choose Occasion...</option>
+                <option value="casual">Casual</option>
+                <option value="business">Business</option>
+                <option value="formal">Formal</option>
+                <option value="sports">Sports/Active</option>
+            </select>
+
+            <label for="input-prompt" class="sr-only">Additional Preferences</label>
+            <textarea id="input-prompt" name="input-prompt" class="input-field animate__animated animate__fadeInUp animate-delay-2" placeholder="Add any specific preferences or requirements..." aria-label="Additional Preferences"></textarea>
+
+            <div class="slider-container animate__animated animate__fadeInUp animate-delay-3">
+                <label for="temperature">
+                    Temperature
+                    <span id="label-temperature">0.7</span>
+                </label>
+                <input type="range" id="temperature" name="temperature" min="0" max="1" step="0.1" value="0.7">
+            </div>
+
+            <div class="slider-container animate__animated animate__fadeInUp animate-delay-4">
+                <label for="top-k">
+                    Top-K
+                    <span id="label-top-k">40</span>
+                </label>
+                <input type="range" id="top-k" name="top-k" min="1" max="40" step="1" value="40">
+            </div>
+
+            <div class="button-container">
+                <button id="button-prompt" disabled class="animate__animated animate__fadeInUp animate-delay-5">Get Suggestions</button>
+                <button id="button-reset" disabled class="animate__animated animate__fadeInUp animate-delay-6">Reset</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <div id="loading">
+                <div class="loading-spinner"></div>
+                <p>Generating suggestions...</p>
+            </div>
+
+            <div id="error" hidden class="error-message"></div>
+
+            <div id="response" hidden class="response-container"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Smart Outfit Recommender",
+    "version": "1.0",
+    "description": "Receive AI-driven clothing suggestions",
+    "permissions": ["sidePanel"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "side_panel": {
+        "default_path": "sidepanel/index.html"
+    },
+    "action": {
+        "default_title": "Smart Outfit Recommender"
+    }
+}
