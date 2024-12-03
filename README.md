@@ -37,6 +37,10 @@ The Smart Outfit Recommender addresses the common challenge of selecting suitabl
 4. Adjust the sliders for temperature and top-K as needed.
 5. Click "Get Suggestions"
 
+## Demo
+
+Watch the demo video to see the Smart Outfit Recommender in action: [Demo Video](https://youtu.be/RcVWQg1El8E)
+
 ## Development
 
 - The project uses a service worker (`background.js`) to manage the side panel behavior.
